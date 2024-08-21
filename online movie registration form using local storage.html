@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie registration</title>
+    <style>
+        body{
+            font-size: 25px;
+        }
+        input[type="text"],[type="date"],[type="time"],[type="number"]{
+            font-size: 30px;
+        }
+        button{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <form action=" " method="post">
+    <h1>Movie Registration Form</h1>
+    <label for="username">Username:</label><br>
+    <input type="text"id="text"name="text"><br><br>
+    <label for="title">Movie title:</label><br>
+    <input type="text"id="text"name="text"><br><br>
+    <label for="director">directed by:</label><br>
+    <input type="text"id="text"placeholder="firstname">
+    
+    <input type="text"id="text"placeholder="lastname"><br><br>
+    <label for="date">Date:</label><br>
+    <input type="date"id="number"name="number"><br><br>
+    <label for="time">time:</label><br>
+    <input type="time"id="number"name="number"><br><br>
+    <label for="mobile no.">Mobile no.:</label><br>
+    <input type="number"id="number"name="number"><br><br>
+    <button type="Register">Register</button>
+    </form>
+</fieldset>
+<script>
+    function save()
+    {
+        if (typeof(Storage) !== "undefined") 
+        {
+            var x=document.getElementById("Username").value;
+            localStorage.setItem("f1",x);
+            var y=document.getElementById("Mobile no.").value;
+            localStorage.setItem("p1",y);
+            localStorage.clear();
+          alert(x);
+        }
+
+    }
+</script>
+</body>
+</html>
